@@ -12,20 +12,20 @@ class Square {
 
     public function __construct($base) {
 
-        $this -> lato = $base;
+        $this -> base = $base;
 
     }
 
     public function areaSquare() {
-        return $this -> lato * $this -> lato;
+        return $this -> base * $this -> base;
     }
     public function perimetroSquare() {
-        return 4 * $this -> lato;
+        return 4 * $this -> base;
     }
 
     public function __toString() {
 
-        return "Square:<br>base: " .$this -> lato ."<br>"
+        return "Square:<br>base: " .$this -> base ."<br>"
              . "area: " . $this -> areaSquare() . "<br>"
              . "perimetro: " . $this -> perimetroSquare() . "<br>";
     }
