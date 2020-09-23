@@ -8,7 +8,6 @@ testare le classi definite con alcune istanze per verificare che sia tutto corre
 class Square {
 
     public $base;
-    public $altezza;
 
     public function __construct($base) {
 
