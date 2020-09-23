@@ -30,10 +30,43 @@ class Square {
     }
 }
 
+class Cube extends Square {
+
+    public $base;
 
 
-$square1 = new Square(10);
-echo $square1 ."<br>";
+    public function __construct($base) {
 
+        $this -> base = $base;
+
+    }
+
+    public function volumeCubo() {
+
+        return $this -> areaSquare() * $this -> base;
+    }
+    public function superficieCubo() {
+        return 6 * $this -> areaSquare();
+    }
+
+    public function __toString() {
+
+        return "Cube:<br>base: " .$this -> base ."<br>"
+             . "volume: " . $this -> volumeCubo() . "<br>"
+             . "superficie: " . $this -> superficieCubo() . "<br>";
+    }
+
+
+}
+
+
+
+
+
+$square1 = new Square(5);
+echo $square1 . "<br>";
+
+$cube1 = new Cube(5);
+echo $cube1 . "<br>";
 
  ?>
